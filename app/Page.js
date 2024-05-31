@@ -1,12 +1,19 @@
 import * as React from "react";
 import {StyleSheet, View} from 'react-native';
-import { Button, Text } from 'react-native-paper';
+import { Button, Text, Snackbar, Portal } from 'react-native-paper';
 
 const Page = () => {
   const [showMore, setShowMore] = React.useState(false);
 
   const learnMore = () => {
     setShowMore(!showMore);
+  }
+
+  const [notify, setNotify] = React.useState(false);
+
+  const doNotify = () => {
+	setNotify(true);
+	console.log("hi");
   }
 
   return (
@@ -17,6 +24,15 @@ const Page = () => {
       {showMore &&
       <Text style={styles.body}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</Text>
       }
+	  <Button style={styles.infoButton} onPress={doNotify}>Wat?</Button>
+		<Portal>
+	  <Snackbar visible={notify} onDismiss={() => {setNotify(false)}} action={{
+          label: 'Ok',
+          onPress: () => {
+            // Do something
+          },
+        }}>2 Dangers detected</Snackbar>
+</Portal>
     </View>
   );
 }
