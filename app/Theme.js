@@ -2,7 +2,7 @@ import { MD3LightTheme as DefaultTheme } from 'react-native-paper';
 
 const colors = {
   "colors": {
-    "primary": "rgb(186, 26, 32)",
+    "primary": "#FF7354",
     "onPrimary": "rgb(255, 255, 255)",
     "primaryContainer": "rgb(255, 218, 214)",
     "onPrimaryContainer": "rgb(65, 0, 3)",
@@ -18,8 +18,8 @@ const colors = {
     "onError": "rgb(255, 255, 255)",
     "errorContainer": "rgb(255, 218, 214)",
     "onErrorContainer": "rgb(65, 0, 2)",
-    "background": "rgb(255, 251, 255)",
-    "onBackground": "rgb(32, 26, 25)",
+    "background": "#2F2E41",
+    "onBackground": "#FFFFFF",
     "surface": "rgb(255, 251, 255)",
     "onSurface": "rgb(32, 26, 25)",
     "surfaceVariant": "rgb(245, 221, 219)",
